@@ -1,0 +1,83 @@
+
+//----------------- General Utility Mixins
+
+
+//-------- Clearfix
+
+@mixin clearfix {
+  // http://nicolasgallagher.com/micro-clearfix-hack/
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after { clear: both; }
+  & { *zoom: 1; }
+}
+
+
+//-------- SEO Text
+
+@mixin seo-text {
+  font: 0/0 a;
+  text-shadow: none;
+  color: transparent;
+}
+
+
+//-------- Animation
+
+@mixin keyframes($animation_name) {
+  @-webkit-keyframes $animation_name {
+    @content;
+  }
+  @-moz-keyframes $animation_name {
+    @content;
+  }
+  @-o-keyframes $animation_name {
+    @content;
+  }
+  @keyframes $animation_name {
+    @content;
+  }
+}
+@mixin animation($animation) {
+  -o-animation: $animation;
+  -moz-animation: $animation;
+  -webkit-animation: $animation;
+  animation: $animation;
+}
+
+//-------- Basic Media Query
+
+@mixin media($point) {
+  @media ( #{$point} ) {
+     @content;
+  }
+}
+
+
+//-------- Typography Conversion
+// https://github.com/Toadstool-Stipe/stipe/blob/master/stylesheets/stipe/typography/_functions.scss
+
+// General font size function that will convert intigers into em values
+// font-size: em(12);
+@function em($target, $context: $font_size) {
+  @return ($target / $context) * 1em;
+}
+
+@function rem($target, $context: $font_size) {
+  @return ($target / $context) * 1rem;
+}
+
+// Baseline height calculations 
+// line-height: baseline($baseline_size);
+@function baseline($baseline_size) {
+  @return ($line / $baseline_size) * ceil($baseline_size / $line) * 1;
+}
+
+// Baseline margin calculations 
+// margin-bottom: baseline-margin($baseline_size);
+@function baseline-margin($baseline_size) {
+  @return ($line / $baseline_size) * 1em;
+}

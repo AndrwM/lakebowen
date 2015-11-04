@@ -1,0 +1,89 @@
+
+
+//----------------- Breakpoints, Susy, & Thangz
+
+$bp-small: "min-width: 401px";
+$bp-medium: "min-width: 901px";
+$bp-large: "min-width: 1101px";
+
+$border-radius: 2px;
+$font-size: 20px;
+
+//----------------- Colors
+
+$c-yellow: #FFCD01;
+$c-yellow-dark: #866D06;
+
+// Neutrals
+$c-grey-extradark: #22242C; // #3B3E33
+$c-grey-dark: #252A2D; // #3B3E33
+$c-grey-medium: #4d4f5d;
+$c-grey-light: #939499;
+$c-grey-extralight: #F4F4F4;
+
+//----------------- Type Mixins
+
+$ff-meta-serif: "ff-meta-serif-web-pro", Georgia, "Times New Roman", serif;
+$ff-freight-sans: "freight-sans-pro", Helvetica, Arial, sans-serif;
+
+@mixin ff-heading-light {
+  font-family: $ff-freight-sans;
+  font-weight: 400;
+  font-style: normal;
+}
+@mixin ff-heading-bold {
+  font-family: $ff-freight-sans;
+  font-weight: 600;
+  font-style: normal;
+}
+
+@mixin ff-body-bold {
+  font-family: $ff-meta-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+@mixin ff-body {
+  font-family: $ff-meta-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+//----------------- Misc Presets
+
+@mixin transition-hover {
+  transition-duration: 0.2s;
+  transition-property: all;
+  transition-timing-function: ease-out;
+}
+
+@include keyframes(introFade-top) {
+  0% {
+    opacity: 0;
+    transform:translate3d(0, 50px, 0);
+  }
+  100% {
+    transform:translate3d(0, 0px, 0);
+    opacity: 1;
+  }
+}
+@include keyframes(introFade-right) {
+  0% {
+    opacity: 0;
+    transform:translate3d(-70px, 0, 0);
+  }
+  100% {
+    transform:translate3d(0, 0px, 0);
+    opacity: 1;
+  }
+}
+@include keyframes(introFade-left) {
+  0% {
+    opacity: 0;
+    transform:translate3d(70px, 0, 0);
+  }
+  100% {
+    transform:translate3d(0, 0px, 0);
+    opacity: 1;
+  }
+}
