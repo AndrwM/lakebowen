@@ -51,6 +51,11 @@ body {
   @include clearfix;
 }
 
+.container {
+  @include clearfix;
+  padding: 10px 10px 40px;
+}
+
 //----------------- Type Tags
 
 //-- Headlines
@@ -58,9 +63,16 @@ body {
 h1 {
   @include ff-heading;
   font-size: em(48px);
-  @include media($bp-medium) {
-    text-align: center;
-  }
+}
+
+h2 {
+  @include ff-heading;
+  font-size: em(20px);
+}
+
+h3 {
+  @include ff-heading;
+  font-size: em(16px);
 }
 
 hr {
