@@ -1,10 +1,15 @@
 header {
   background-color: $c-blue-dark;
-
+  // ---------- Primary
   .primary {
     background: $c-blue-light;
-    text-align: center;
     padding: 20px;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 6666;
     @include media($bp-medium) {
       padding: 0;
       height: 164px;
@@ -39,6 +44,21 @@ header {
           &.left { float: left; }
           &.right { float: right; }
         }
+      }
+    }
+  }
+
+  // ---------- Masthead
+  .masthead {
+    padding: 500px 0 60px;
+    color: $c-white;
+    text-align: center;
+    p {
+      margin: 0 auto;
+      font-style: italic;
+      a.cta {
+        margin-top: 16px;
+        display: inline-block;
       }
     }
   }
