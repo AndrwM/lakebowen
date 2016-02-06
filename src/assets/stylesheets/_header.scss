@@ -1,0 +1,45 @@
+header {
+  background-color: $c-blue-dark;
+
+  .primary {
+    background: $c-blue-light;
+    text-align: center;
+    padding: 20px;
+    @include media($bp-medium) {
+      padding: 0;
+      height: 164px;
+      background: url("/assets/images/header-bg.png") no-repeat top center;
+    }
+
+    .logo {
+      box-sizing: content-box;
+      padding: 14px;
+      display: block;
+      width: 283px;
+      height: 94px;
+      margin: 0 auto;
+    }
+
+    .nav {
+      list-style: none;
+      @include media($bp-medium) {
+        position: absolute;
+        width: 100%;
+        padding: 0 24px;
+        top: 40px;
+      }
+
+      a {
+        color: $c-black;
+        padding: 12px;
+        display: block;
+        @include ff-heading;
+        @include media($bp-medium) {
+
+          &.left { float: left; }
+          &.right { float: right; }
+        }
+      }
+    }
+  }
+}
