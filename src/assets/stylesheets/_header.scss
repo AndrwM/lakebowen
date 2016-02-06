@@ -4,15 +4,15 @@ header {
   .primary {
     background: $c-blue-light;
     padding: 20px;
-    position: absolute;
     text-align: center;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 6666;
     @include media($bp-medium) {
       padding: 0;
       height: 164px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 6666;
       background: url("/assets/images/header-bg.png") no-repeat top center;
     }
 
@@ -20,9 +20,12 @@ header {
       box-sizing: content-box;
       padding: 14px;
       display: block;
-      width: 283px;
+      max-width: 283px;
       height: 94px;
       margin: 0 auto;
+      img {
+        width: 100%;
+      }
     }
 
     .nav {
@@ -50,9 +53,10 @@ header {
 
   // ---------- Masthead
   .masthead {
-    padding: 500px 0 60px;
+    padding: 60px 20px;
     color: $c-white;
     text-align: center;
+     @include media($bp-medium) { padding: 500px 0 60px; }
     p {
       margin: 0 auto;
       font-style: italic;
