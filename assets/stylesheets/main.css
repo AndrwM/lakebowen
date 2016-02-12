@@ -140,7 +140,7 @@ body {
 
 .wrapper {
   max-width: 1060px;
-  background: #fff url(/assets/images/footer-bg.png) bottom center no-repeat;
+  background: #fff url(http://andrwm.github.io/lakebowenhttp://andrwm.github.io/lakebowen//images/footer-bg.png) bottom center no-repeat;
   margin: 0 auto 50px;
   padding: 0 0 100px; }
   .wrapper:before, .wrapper:after {
@@ -186,7 +186,7 @@ h3 {
   font-size: 0.88889em; }
 
 hr {
-  background: url("/assets/images/divider-blue.png") no-repeat center center;
+  background: url("http://andrwm.github.io/lakebowen//images/divider-blue.png") no-repeat center center;
   border: 0;
   height: 19px;
   width: 100%;
@@ -211,7 +211,7 @@ p {
     border-bottom: 2px solid #59BAEE; }
 
 header {
-  background: #0B476B url("/assets/images/header-images/1.jpg") no-repeat top center;
+  background: #0B476B url("http://andrwm.github.io/lakebowen//images/header-images/1.jpg") no-repeat top center;
   min-height: 130px; }
   header .primary-nav {
     background: #59BAEE;
@@ -226,7 +226,7 @@ header {
         left: 0;
         right: 0;
         z-index: 6666;
-        background: url("/assets/images/header-bg.png") no-repeat top center; } }
+        background: url("http://andrwm.github.io/lakebowen//images/header-bg.png") no-repeat top center; } }
     header .primary-nav .logo {
       box-sizing: content-box;
       padding: 14px;
@@ -297,7 +297,7 @@ header {
       .module-half {
         width: 46%; } }
   .module .header {
-    background: url("/assets/images/module-bg.png") top left;
+    background: url("http://andrwm.github.io/lakebowen//images/module-bg.png") top left;
     height: 82px;
     padding: 20px 20px 0;
     color: #fff; }
