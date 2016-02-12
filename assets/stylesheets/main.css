@@ -192,6 +192,9 @@ hr {
   width: 100%;
   margin: 20px 0; }
 
+strong {
+  font-weight: bold; }
+
 a {
   text-decoration: none;
   color: inherit; }
@@ -208,13 +211,14 @@ p {
     border-bottom: 2px solid #59BAEE; }
 
 header {
-  background: #0B476B url("/assets/images/header-images/1.jpg") no-repeat top center; }
-  header .primary {
+  background: #0B476B url("/assets/images/header-images/1.jpg") no-repeat top center;
+  min-height: 130px; }
+  header .primary-nav {
     background: #59BAEE;
     padding: 20px;
     text-align: center; }
     @media (min-width: 901px) {
-      header .primary {
+      header .primary-nav {
         padding: 0;
         height: 164px;
         position: absolute;
@@ -223,24 +227,25 @@ header {
         right: 0;
         z-index: 6666;
         background: url("/assets/images/header-bg.png") no-repeat top center; } }
-    header .primary .logo {
+    header .primary-nav .logo {
       box-sizing: content-box;
       padding: 14px;
       display: block;
       max-width: 283px;
       height: 94px;
-      margin: 0 auto; }
-      header .primary .logo img {
+      margin: 0 auto;
+      z-index: 6666; }
+      header .primary-nav .logo img {
         width: 100%; }
-    header .primary .nav {
+    header .primary-nav .nav {
       list-style: none; }
       @media (min-width: 901px) {
-        header .primary .nav {
+        header .primary-nav .nav {
           position: absolute;
           width: 100%;
           padding: 0 24px;
           top: 40px; } }
-      header .primary .nav a {
+      header .primary-nav .nav a {
         color: #001f2b;
         padding: 12px;
         display: block;
@@ -250,10 +255,19 @@ header {
         text-transform: uppercase;
         letter-spacing: 0.01em; }
         @media (min-width: 901px) {
-          header .primary .nav a.left {
+          header .primary-nav .nav a.left {
             float: left; }
-          header .primary .nav a.right {
+          header .primary-nav .nav a.right {
             float: right; } }
+  header .pagetitle {
+    display: none; }
+    @media (min-width: 901px) {
+      header .pagetitle {
+        display: block;
+        top: 220px;
+        text-align: center;
+        color: #fff;
+        text-shadow: 0px 1px 4px #0B476B; } }
   header .masthead {
     padding: 60px 20px;
     color: #fff;
@@ -279,7 +293,9 @@ header {
       .module-1 {
         width: 31%; }
       .module-2 {
-        width: 61%; } }
+        width: 61%; }
+      .module-half {
+        width: 46%; } }
   .module .header {
     background: url("/assets/images/module-bg.png") top left;
     height: 82px;
@@ -324,6 +340,45 @@ header {
 
 .module-copy p {
   margin-bottom: 20px; }
+
+.module-menu h3 {
+  font-size: 14px; }
+
+.module-menu dl:before, .module-menu dl:after {
+  content: " ";
+  display: table; }
+
+.module-menu dl:after {
+  clear: both; }
+
+.module-menu dl {
+  *zoom: 1; }
+
+.module-menu dd, .module-menu dt {
+  padding: 10px 0;
+  display: inline-block; }
+
+.module-menu dt {
+  float: left;
+  clear: left; }
+  .module-menu dt span {
+    font-size: 60%;
+    font-style: italic;
+    margin-left: 5px; }
+
+.module-menu dd {
+  float: right;
+  clear: right; }
+
+.module-menu .detail {
+  font-size: 60%;
+  clear: both;
+  line-height: 150%;
+  top: -5px;
+  margin-bottom: 5px; }
+
+.module-menu h3 {
+  margin: 26px 0 5px; }
 
 .internal-ad {
   text-align: center; }
